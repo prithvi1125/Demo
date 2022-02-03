@@ -15,5 +15,5 @@ stage('code-checkout'){
                     submoduleCfg: [],
                     userRemoteConfigs: [[url: 'https://github.com/prithvi1125/Demo.git']]
                 ])
-                ))))
+                )))
   
