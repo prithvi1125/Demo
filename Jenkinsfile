@@ -24,7 +24,7 @@ stage('eksdeploy') {
       ])
      {
      script {
-     sh """kubectl  get po """
+     sh  """kubectl  get po """
 }}}}
 
 
