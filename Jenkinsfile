@@ -15,5 +15,20 @@ stage('code-checkout'){
                     submoduleCfg: [],
                     userRemoteConfigs: [[url: 'https://github.com/prithvi1125/Demo.git']]
                 ])
-    }}}}
+    }}
+
+stage('eksdeploy') {
+    steps{
+     withKubeCredentials([
+     [clusterName: 'demo', contextName: "iam-root-account@demo.ap-south-1.eksctl.io", credentialsId: "demo", namespace: "default", serverUrl: "https://B5C23D146B890FA2B2902007A75878F1.sk1.ap-south-1.eks.amazonaws.com"]
+      ])
+     {
+     script {
+     sh """kubectl  get po """
+}}}}
+
+
+}}
+
+
   
